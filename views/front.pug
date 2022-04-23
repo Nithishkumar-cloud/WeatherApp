@@ -1,0 +1,41 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Weather App
+  link(rel='stylesheet' href='./css/style.css')
+section.time
+  h3
+    | Localtime 
+    span  #{localtime}
+.box
+  form(action='/' method='POST')
+    label ENTERCITY
+    br
+    input.city(type='text' name='city' placeholder='EnterCity' required='required' spellcheck='false' autocomplete='off')
+    br
+    input.button(type='submit' value='submit')
+  section
+    h4 Farenheit :        #{temp_f}
+    h4 Latitude  :        #{latitude}
+    h4 Longitude :        #{longitude}
+  
+.container
+  .widget
+    .left
+      img.icon(src='../images/overcast-day.svg')
+      h5.weather-status #{text}
+    .right
+      h5.cit #{city}
+      h5.degree #{temp_c}&deg;C
+    .bottom
+      div
+        | Wind Speed 
+        span #{wind_kph}
+      div
+        | Wind Direction
+        span #{wind_dir}
+      div
+        | Pressure
+        span #{pressure_mb}mb
+
