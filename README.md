@@ -1,4 +1,3 @@
- https://weathern-nithish.herokuapp.com/
 
 Try this :)
 
